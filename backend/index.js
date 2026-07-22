@@ -5,6 +5,7 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.route.js";
 import productsRoutes from "./routes/productsRoutes.routes.js"
+import ordersRoutes from "./routes/ordersRoutes.routes.js";
 // db connection
 connectDB();
 
@@ -22,7 +23,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productsRoutes);
 // app.use("/api/cart", cartRoutes);
-// app.use("/api/orders", ordersRoutes);
+app.use("/api/orders", ordersRoutes);
 // app.use("/api/payment", paymentRoutes);
 // app.use("/api/analytics", analyticsRoutes);
 
