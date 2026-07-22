@@ -5,7 +5,9 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.route.js";
 import productsRoutes from "./routes/productsRoutes.routes.js"
-import ordersRoutes from "./routes/ordersRoutes.routes.js";
+import  ordersRoutes from "./routes/ordersRoutes.routes.js"
+import paymentRoutes from "./routes/paymentRoutes.routes.js"
+import analyticsRoutes from "./routes/analyticsRoutes.routes.js"
 // db connection
 connectDB();
 
@@ -24,8 +26,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productsRoutes);
 // app.use("/api/cart", cartRoutes);
 app.use("/api/orders", ordersRoutes);
-// app.use("/api/payment", paymentRoutes);
-// app.use("/api/analytics", analyticsRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/analytics", analyticsRoutes);
 
 
 

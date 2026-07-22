@@ -8,6 +8,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../controllers/productController.controller.js";
+
 import multer from "multer";
   
 
