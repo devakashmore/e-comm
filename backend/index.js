@@ -21,10 +21,10 @@ app.get("/", (req, res) => {
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productsRoutes);
-app.use("/api/cart", cartRoutes);
-app.use("/api/orders", ordersRoutes);
-app.use("/api/payment", paymentRoutes);
-app.use("/api/analytics", analyticsRoutes);
+// app.use("/api/cart", cartRoutes);
+// app.use("/api/orders", ordersRoutes);
+// app.use("/api/payment", paymentRoutes);
+// app.use("/api/analytics", analyticsRoutes);
 
 
 
