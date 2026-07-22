@@ -9,8 +9,11 @@ import {
   deleteProduct,
 } from "../controllers/productController.controller.js";
 import multer from "multer";
+  
 
 const upload = multer({ dest: "uploads/" });
+
+
 
 const router = Router();
 
@@ -18,13 +21,13 @@ const router = Router();
 router
   .route("/")
   .get(getProducts)
-  .post(protect, admin, upload.single("image"), createProduct);
+  .post(protect, admin, upload.single("imageUrls"), createProduct);
 
 // specific product
 router
   .route("/:id")
   .get(getProductsById)
   .put(protect, admin, updateProduct)
-  .delete(protect, admin, deleteProduct);
+  .delete(protect, admin,upload.single("imageUrls"), deleteProduct);
 
 export default router;
