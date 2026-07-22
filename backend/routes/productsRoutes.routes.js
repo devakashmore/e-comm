@@ -27,7 +27,7 @@ router
 router
   .route("/:id")
   .get(getProductsById)
-  .put(protect, admin, updateProduct)
-  .delete(protect, admin,upload.single("imageUrls"), deleteProduct);
+  .put(protect, admin,upload.single("imageUrls"), updateProduct)
+  .delete(protect, admin, deleteProduct);
 
 export default router;
