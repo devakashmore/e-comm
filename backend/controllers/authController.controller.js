@@ -9,8 +9,9 @@ const generateToken = (id) => {
 };
 
 const registerUSer = async (req, res) => {
-  const { name, email, password } = req.body;
+ 
   try {
+    const { name , email, password } = req.body;
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
